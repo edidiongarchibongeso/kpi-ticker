@@ -41,10 +41,13 @@
   <script>
     async function loadKPI() {
       try {
-        const response = await fetch("https://dubaiaviationcorp.sharepoint.com/sites/MaintrolOSR/Shared%20Documents/kpi_data.txt");
-        const text = await response.text();
-        const data = JSON.parse(text);
-        document.getElementById("tickerText").textContent = data.text;
+        const response = await fetch("https://raw.githubusercontent.com/edidiongarchibongeso/kpi-ticker/main/kpi_data.txt");  // Replace if needed
+        const json = await response.json();
+
+        const item = json.results[0].items[0];
+        const msg = `Fleet: ${item.fleet} | MX: ${item.mx} | AOG: ${item.aog} | C-Check: ${item.c_check} | A-Check: ${item.a_check} | Non-ETOPS: ${item.non_etops} | MEL: ${item.mel_items} | OPT: ${item.opt_items} | OPS Alert: ${item.ops_alert_count} | Availability: ${item.availability}% | Ops Add: ${(item.ops_add * 100).toFixed(2)}%`;
+
+        document.getElementById("tickerText").textContent = msg;
       } catch (error) {
         document.getElementById("tickerText").textContent = "Unable to load KPI data";
         console.error("Error loading KPI data:", error);
