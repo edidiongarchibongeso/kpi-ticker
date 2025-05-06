@@ -41,7 +41,7 @@
   <script>
     async function loadKPI() {
       try {
-        const response = await fetch("https://raw.githubusercontent.com/edidiongarchibongeso/kpi-ticker/main/kpi_data.txt");  // Replace if needed
+        const response = await fetch("https://raw.githubusercontent.com/edidiongarchibongeso/kpi-ticker/main/kpi_data.txt");
         const json = await response.json();
 
         const item = json.results[0].items[0];
