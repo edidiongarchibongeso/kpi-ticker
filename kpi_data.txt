@@ -1,0 +1,4 @@
+{"results":[{"columns":[{"name":"fleet","type":""},{"name":"mx","type":""},{"name":"aog","type":""},{"name":"c_check","type":""},{"name":"a_check","type":""},{"name":"non_etops","type":""},{"name":"mel_items","type":""},{"name":"opt_items","type":""},{"name":"ops_alert_count","type":""},{"name":"availability","type":""},{"name":"ops_add","type":""}],"items":
+[
+{"fleet":88,"mx":4,"aog":2,"c_check":0,"a_check":0,"non_etops":11,"mel_items":28,"opt_items":5,"ops_alert_count":18,"availability":93.18,"ops_add":0.3182}
+]}
